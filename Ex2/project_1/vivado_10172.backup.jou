@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Apr  9 20:39:33 2019
+# Process ID: 10172
+# Current directory: C:/Users/admin/Desktop/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5452 C:\Users\admin\Desktop\project_1\project_1.xpr
+# Log file: C:/Users/admin/Desktop/project_1/vivado.log
+# Journal file: C:/Users/admin/Desktop/project_1\vivado.jou
+#---------------------------------------------------------stastart_gopen_project C:/Users/admin/Desktop/project_1/project_1.xpr
+pr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/admin/Desktop/project_1/project_1.srcs/sim_1/new/topsim.v w ]
+add_files -fileset sim_1 C:/Users/admin/Desktop/project_1/project_1.srcs/sim_1/new/topsim.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top topsim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_simulation
+open_wave_config C:/Users/admin/Desktop/project_1/regSim_behav.wcfg
+source topsim.tcl
+current_wave_config {regSim_behav.wcfg}
+add_wave {{/topsim/u1}} 
+update_ip_catalog
+save_wave_config {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg}
+set_property -name {xsim.simulate.runtime} -value {12ns} -objects [get_filesets sim_1]
+update_ip_catalog
+save_wave_config {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg}
+add_wave {{/topsim/u1}} 
+add_wave {{/topsim/u1}} 
+current_wave_config {Untitled 2*}
+add_wave {{/glbl}} 
+add_wave {{/glbl}} 
+add_wave {{/topsim/u1}} 
+add_wave {{/topsim/u1}} 
+close_sim
+launch_simulation
+open_wave_config C:/Users/admin/Desktop/project_1/regSim_behav.wcfg
+source topsim.tcl
+current_wave_config {regSim_behav.wcfg}
+add_wave {{/topsim/u1}} 
+save_wave_config {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg}
+add_wave {{/topsim/u1}} 
+current_wave_config {Untitled 6*}
+add_wave {{/topsim/u1/regfile/regwr}} 
+current_wave_config {Untitled 6*}
+add_wave {{/topsim/u1/regfile/regwr}} 
+current_wave_config {Untitled 6*}
+add_wave {{/topsim/u1/regfile/regs}} 
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_sim

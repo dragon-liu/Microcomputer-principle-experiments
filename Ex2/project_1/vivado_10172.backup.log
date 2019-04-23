@@ -1,0 +1,257 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Apr  9 20:39:33 2019
+# Process ID: 10172
+# Current directory: C:/Users/admin/Desktop/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5452 C:\Users\admin\Desktop\project_1\project_1.xpr
+# Log file: C:/Users/admin/Desktop/project_1/vivado.log
+# Journal file: C:/Users/admin/Desktop/project_1\vivado.jou
+#---------------------------------------------------------stastart_gopen_project C:/Users/admin/Desktop/project_1/project_1.xpr
+ScaScanning sources.FinFinished scanning sourcINFINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specifiINFINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/vivado/Vivado/2018.1/data/ipopen_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 831.582 ; gain = 66.254
+exiupINFO: [Common 17-206] Exiting Vivado aset_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/admin/Desktop/project_1/project_1.srcs/sim_1/new/topsim.v w ]
+add_files -fileset sim_1 C:/Users/admin/Desktop/project_1/project_1.srcs/sim_1/new/topsim.v
+update_compile_order -fileset sim_1
+set_property top topsim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivado/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'topsim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim/InstrROM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj topsim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/InstrROM/sim/InstrROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/ip/DataROM/sim/DataROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/aluctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/mainctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mainctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sim_1/new/topsim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module topsim
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivado/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 2425f7e436e149bd8b5a450d409ce585 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot topsim_behav xil_defaultlib.topsim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 32 for port WriteAddr [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mainctr
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.aluctr
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.DataROM
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.InstrROM
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.topsim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot topsim_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/topsim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr  9 20:57:02 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 871.469 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "topsim_behav -key {Behavioral:sim_1:Functional:topsim} -tclbatch {topsim.tcl} -view {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config C:/Users/admin/Desktop/project_1/regSim_behav.wcfg
+WARNING: Simulation object /regSim/clk was not found in the design.
+WARNING: Simulation object /regSim/reset was not found in the design.
+WARNING: Simulation object /regSim/regwr was not found in the design.
+WARNING: Simulation object /regSim/RsAddr was not found in the design.
+WARNING: Simulation object /regSim/RtAddr was not found in the design.
+WARNING: Simulation object /regSim/WriteAddr was not found in the design.
+WARNING: Simulation object /regSim/WriteData was not found in the design.
+WARNING: Simulation object /regSim/RsData was not found in the design.
+WARNING: Simulation object /regSim/RtData was not found in the design.
+WARNING: Simulation object /regSim/WriteDaya was not found in the design.
+WARNING: Simulation object /regSim/PERIOD was not found in the design.
+source topsim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 50ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'topsim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 50ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 875.262 ; gain = 3.793
+current_wave_config {regSim_behav.wcfg}
+regSim_behav.wcfg
+add_wave {{/topsim/u1}} 
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/admin/Desktop/project_1/project_1.srcs/sim_1/new/topsim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:]
+update_ip_catalog
+save_wave_config {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg}
+set_property -name {xsim.simulate.runtime} -value {12ns} -objects [get_filesets sim_1]
+update_ip_catalog
+save_wave_config {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg}
+add_wave {{/topsim/u1}} 
+add_wave {{/topsim/u1}} 
+current_wave_config {Untitled 2*}
+WARNING: [Wavedata 42-16] Error Unable to get wave configuration 'Untitled 2*'.
+Untitled 2
+add_wave {{/glbl}} 
+add_wave {{/glbl}} 
+add_wave {{/topsim/u1}} 
+add_wave {{/topsim/u1}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivado/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'topsim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim/InstrROM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj topsim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/admin/Desktop/project_1/project_1.srcs/sim_1/new/topsim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module topsim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivado/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 2425f7e436e149bd8b5a450d409ce585 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot topsim_behav xil_defaultlib.topsim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 32 for port WriteAddr [C:/Users/admin/Desktop/project_1/project_1.srcs/sources_1/new/top.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mainctr
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.aluctr
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.DataROM
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.InstrROM
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.topsim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot topsim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/admin/Desktop/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "topsim_behav -key {Behavioral:sim_1:Functional:topsim} -tclbatch {topsim.tcl} -view {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+open_wave_config C:/Users/admin/Desktop/project_1/regSim_behav.wcfg
+source topsim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 12ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'topsim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 12ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 972.918 ; gain = 14.289
+current_wave_config {regSim_behav.wcfg}
+regSim_behav.wcfg
+add_wave {{/topsim/u1}} 
+save_wave_config {C:/Users/admin/Desktop/project_1/regSim_behav.wcfg}
+add_wave {{/topsim/u1}} 
+current_wave_config {Untitled 6*}
+WARNING: [Wavedata 42-16] Error Unable to get wave configuration 'Untitled 6*'.
+Untitled 6
+add_wave {{/topsim/u1/regfile/regwr}} 
+current_wave_config {Untitled 6*}
+WARNING: [Wavedata 42-16] Error Unable to get wave configuration 'Untitled 6*'.
+Untitled 6
+add_wave {{/topsim/u1/regfile/regwr}} 
+current_wave_config {Untitled 6*}
+WARNING: [Wavedata 42-16] Error Unable to get wave configuration 'Untitled 6*'.
+Untitled 6
+add_wave {{/topsim/u1/regfile/regs}} 
+launch_runs synth_1 -jobs 4
+[Tue Apr  9 21:20:41 2019] Launched synth_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Tue Apr  9 21:22:46 2019] Launched impl_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 378 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'regfile' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1207.367 ; gain = 212.707
+INFO: [Common 17-344] 'open_run' was cancelled
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Tue Apr  9 21:24:34 2019] Launched synth_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Tue Apr  9 21:27:09 2019] Launched impl_1...
+Run output will be captured here: C:/Users/admin/Desktop/project_1/project_1.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  9 21:33:13 2019...
