@@ -1,0 +1,103 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jun 18 01:15:48 2019
+# Process ID: 4616
+# Current directory: H:/MicroComputerPrinciple/MicroblazeForExperiment
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4232 H:\MicroComputerPrinciple\MicroblazeForExperiment\MicroblazeForExperiment.xpr
+# Log file: H:/MicroComputerPrinciple/MicroblazeForExperiment/vivado.log
+# Journal file: H:/MicroComputerPrinciple/MicroblazeForExperiment\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.xpr
+update_compile_order -fileset sources_1
+open_bd_design {H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.srcs/sources_1/bd/ShiyanPingtai/ShiyanPingtai.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2 91 -412} [get_bd_cells axi_gpio_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+set_property location {1.5 -121 -420} [get_bd_cells axi_timer_0]
+set_property -dict [list CONFIG.C_GPIO_WIDTH {8} CONFIG.C_GPIO2_WIDTH {8} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS {0} CONFIG.C_INTERRUPT_PRESENT {1} CONFIG.GPIO_BOARD_INTERFACE {dual_seven_seg_led_disp} CONFIG.GPIO2_BOARD_INTERFACE {seven_seg_led_an}] [get_bd_cells axi_gpio_0]
+delete_bd_objs [get_bd_cells axi_timer_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_0/S_AXI} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "dual_seven_seg_led_disp ( 7 Segments ) " }  [get_bd_intf_pins axi_gpio_0/GPIO]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "seven_seg_led_an ( 8 Anodes ) " }  [get_bd_intf_pins axi_gpio_0/GPIO2]
+endgroup
+save_bd_design
+validate_bd_design
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+make_wrapper -files [get_files H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.srcs/sources_1/bd/ShiyanPingtai/ShiyanPingtai.bd] -top
+add_files -norecurse H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.srcs/sources_1/bd/ShiyanPingtai/hdl/ShiyanPingtai_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {16} CONFIG.C_ALL_INPUTS {1} CONFIG.GPIO_BOARD_INTERFACE {dip_switches_16bits}] [get_bd_cells axi_gpio_0]
+endgroup
+validate_bd_design
+save_bd_design
+make_wrapper -files [get_files H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.srcs/sources_1/bd/ShiyanPingtai/ShiyanPingtai.bd] -top
+reset_run synth_1
+reset_run ShiyanPingtai_axi_gpio_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file mkdir H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk
+file copy -force H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/impl_1/ShiyanPingtai_wrapper.sysdef H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+
+launch_sdk -workspace H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk -hwspec H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+launch_sdk -workspace H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk -hwspec H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+file copy -force H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/impl_1/ShiyanPingtai_wrapper.sysdef H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+
+launch_sdk -workspace H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk -hwspec H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+launch_sdk -workspace H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk -hwspec H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+close_project
+open_project H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.xpr
+update_compile_order -fileset sources_1
+open_bd_design {H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.srcs/sources_1/bd/ShiyanPingtai/ShiyanPingtai.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2 119 -406} [get_bd_cells axi_gpio_0]
+set_property -dict [list CONFIG.C_GPIO_WIDTH {16} CONFIG.C_GPIO2_WIDTH {8} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS {1} CONFIG.C_INTERRUPT_PRESENT {1} CONFIG.GPIO_BOARD_INTERFACE {dip_switches_16bits} CONFIG.GPIO2_BOARD_INTERFACE {seven_seg_led_an}] [get_bd_cells axi_gpio_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_0/S_AXI} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "dip_switches_16bits ( 16 Switches ) " }  [get_bd_intf_pins axi_gpio_0/GPIO]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "seven_seg_led_an ( 8 Anodes ) " }  [get_bd_intf_pins axi_gpio_0/GPIO2]
+endgroup
+save_bd_design
+make_wrapper -files [get_files H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.srcs/sources_1/bd/ShiyanPingtai/ShiyanPingtai.bd] -top
+add_files -norecurse H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.srcs/sources_1/bd/ShiyanPingtai/hdl/ShiyanPingtai_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file mkdir H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk
+file copy -force H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.runs/impl_1/ShiyanPingtai_wrapper.sysdef H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+
+launch_sdk -workspace H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk -hwspec H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.GPIO2_BOARD_INTERFACE {dual_seven_seg_led_disp}] [get_bd_cells axi_gpio_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1
+endgroup
+set_property location {2 93 -566} [get_bd_cells axi_gpio_1]
+startgroup
+endgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {8} CONFIG.C_GPIO2_WIDTH {8} CONFIG.C_IS_DUAL {0} CONFIG.C_INTERRUPT_PRESENT {1} CONFIG.GPIO_BOARD_INTERFACE {seven_seg_led_an} CONFIG.GPIO2_BOARD_INTERFACE {Custom}] [get_bd_cells axi_gpio_1]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_1/S_AXI} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "seven_seg_led_an ( 8 Anodes ) " }  [get_bd_intf_pins axi_gpio_1/GPIO]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run ShiyanPingtai_axi_gpio_0_0_synth_1
+reset_run ShiyanPingtai_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.runs/impl_1/ShiyanPingtai_wrapper.sysdef H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf
+
+launch_sdk -workspace H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk -hwspec H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper.hdf

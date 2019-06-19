@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# 
+# Start of session at: Tue Jun 18 14:46:22 2019
+# Process ID: 14576
+# Current directory: h:/MicroComputerPrinciple/MicroblazeForExperiment
+# Command line: updatemem.exe -mode batch -source F:/Vivado2018/SDK/2018.1/scripts/updatemem/main.tcl -notrace -tclargs -meminfo H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper_hw_platform_0/ShiyanPingtai_wrapper.mmi -data F:/Vivado2018/SDK/2018.1/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc ShiyanPingtai_i/microblaze_0 -bit H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper_hw_platform_0/ShiyanPingtai_wrapper.bit -out H:/MICRO_codes/MicroblazeForExperiment/MicroblazeForExperiment.sdk/ShiyanPingtai_wrapper_hw_platform_0/download.bit -force
+# Log file: h:/MicroComputerPrinciple/MicroblazeForExperiment/updatemem.log
+# Journal file: h:/MicroComputerPrinciple/MicroblazeForExperiment\updatemem.jou
+#-----------------------------------------------------------
+source F:/Vivado2018/SDK/2018.1/scripts/updatemem/main.tcl -notrace

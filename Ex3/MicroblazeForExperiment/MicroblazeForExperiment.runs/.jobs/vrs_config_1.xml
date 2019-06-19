@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ShiyanPingtai_mdm_1_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_clk_wiz_1_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_clk_wiz_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_microblaze_0_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_rst_clk_wiz_1_100M_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_rst_clk_wiz_1_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_axi_uartlite_0_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_dlmb_v10_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_ilmb_v10_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="ShiyanPingtai_dlmb_v10_0_synth_1"/>
+	</Run>
+	<Run Id="ShiyanPingtai_lmb_bram_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_xbar_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ShiyanPingtai_axi_gpio_0_0_synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/ShiyanPingtai_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="ShiyanPingtai_mdm_1_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_clk_wiz_1_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_microblaze_0_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_rst_clk_wiz_1_100M_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_dlmb_v10_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_ilmb_v10_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_lmb_bram_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_xbar_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="H:/MicroComputerPrinciple/MicroblazeForExperiment/MicroblazeForExperiment.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="ShiyanPingtai_mdm_1_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_clk_wiz_1_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_microblaze_0_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_rst_clk_wiz_1_100M_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_dlmb_v10_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_ilmb_v10_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_lmb_bram_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_xbar_0_synth_1"/>
+		<Parent Id="ShiyanPingtai_axi_gpio_0_0_synth_1"/>
+	</Run>
+</Runs>
+
